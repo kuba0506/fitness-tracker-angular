@@ -1,0 +1,22 @@
+<!-- Reactive form -->
+<section class="login-form" fxLayoutAlign="center center">
+  <form fxLayout="column" fxLayoutAlign="space-between" fxLayoutGap="15px"  
+  (ngSubmit)="onSubmit(loginForm)"
+  [formGroup]="loginForm">
+    <mat-form-field>
+      <input 
+        type="email" matInput placeholder="Your email" name="email"
+        formControlName="email">
+        <mat-hint>Please enter your email.</mat-hint>
+        <mat-error>Invalid or missing email.</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+          <input type="password" matInput placeholder="Your password" name="password"
+          formControlName="password">
+          <mat-hint>Please enter your password.</mat-hint>
+          <mat-error>Missing password.</mat-error>
+    </mat-form-field>
+    <button *ngIf="!(isPending$ | async)" type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid">Submit</button>
+    <mat-spinner *ngIf="(isPending$ | async)"></mat-spinner>
+  </form>
+</section>
