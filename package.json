@@ -1,7 +1,7 @@
 {
   "name": "fitness-tracker-angular",
   "version": "0.0.0",
-  "homepage": "https://kuba0506.github.io/ng-fitness-angular/",
+  "homepage": "https://kuba0506.github.io/fitness-tracker-angular/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
